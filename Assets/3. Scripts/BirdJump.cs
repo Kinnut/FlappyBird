@@ -7,8 +7,6 @@ public class BirdJump : MonoBehaviour
 {
     Rigidbody2D rb; // rigidbody 주소값
 
-    public GameObject ending;
-
     public float jumpPower; // 점프값
 
     void Start() // 게임을 시작햇을때 실행
@@ -22,11 +20,6 @@ public class BirdJump : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpPower;
             // rb의 velocity에 위쪽으로 점프값을 준다
-        }
-
-        if (transform.position.x <= -4.1f)
-        {
-            ending.SetActive(true);
         }
     }
 }

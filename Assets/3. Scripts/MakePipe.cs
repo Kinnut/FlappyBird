@@ -7,7 +7,7 @@ public class MakePipe : MonoBehaviour
     public GameObject pipe;
     public float timeDiff;
 
-    float timer = 0;
+    float timer = 3;
     void Start()
     {
         
@@ -19,7 +19,7 @@ public class MakePipe : MonoBehaviour
         if (timer > timeDiff )
         {
             GameObject newPipe = Instantiate(pipe);
-            newPipe.transform.position = new Vector3(6, Random.Range(-2.25f, 2.25f), 0);
+            newPipe.transform.position = new Vector3(5, Random.Range(-2.25f, 2.25f), 0);
             timer = 0;
 
             Destroy(newPipe, 7);
