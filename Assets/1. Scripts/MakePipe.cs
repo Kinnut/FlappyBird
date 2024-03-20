@@ -8,15 +8,11 @@ public class MakePipe : MonoBehaviour
     public float timeDiff;
 
     float timer = 3;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > timeDiff )
+        if (timer > timeDiff)
         {
             GameObject newPipe = Instantiate(pipe);
             newPipe.transform.position = new Vector3(5, Random.Range(-2.25f, 2.25f), 0);
